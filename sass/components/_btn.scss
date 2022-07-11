@@ -1,0 +1,48 @@
+.button {
+    border-radius: 4px;
+    min-width: 200px;
+    padding: 10px 32px;
+    background-color: var(--accent-color);
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    font-family: inherit;
+    border: 1px solid transparent;
+}
+
+.hero__button {
+    color:var(--primary-bg-color);
+    text-align: center;
+    @extend %align-list;
+    @include font(700, 1.87, 16px, 0.06em);
+
+    &:hover,
+    &:focus {
+        background-color: var(--hero-button-hover-color);
+    }
+}
+
+.modal-button {
+    border-radius: 4px;
+    min-width: 200px;
+    color:var(--primary-bg-color);
+
+    @extend %align-list;
+    @include font(700, 1.87, 16px, 0.06em);
+    text-align: center;
+
+    padding: 10px 55px 10px 56px;
+    background-color: var(--accent-color);
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+    font-family: inherit;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    &:hover,
+    &:focus{
+        background-color:var(--hero-button-hover-color);
+    }
+}
+

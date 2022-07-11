@@ -1,0 +1,45 @@
+.feature {
+    padding: 94px 0;
+}
+
+.feature__list{
+    display: flex;
+    margin: 0;
+    padding:0;
+
+    .feature__item {
+        width: 270px;
+    }
+
+    .feature__title {
+        margin-top:0;
+        margin-bottom: 10px;
+        color: var(--primary-text-color);
+        text-transform: uppercase;
+        @include font(700, 1.14, 14px, 0.03em);
+    }
+
+    .feature__paragraph {
+        margin-top:0;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--secondary-text-color);
+    }
+}
+
+.feature__list .feature__item + .feature__item {
+    margin-left: 30px;
+}
+
+.svg-container {
+    justify-content: center;
+    @extend %align-list;
+  
+    margin-bottom: 30px;
+    height: 120px;
+  
+    background-color: var(--team-background-color);
+    border-radius: 4px;
+    
+}

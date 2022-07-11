@@ -1,0 +1,119 @@
+header {
+    border-bottom:1px solid var(--header-border-color);
+    align-items: center;
+    margin-top: 0;
+    @extend %align-list;
+    
+    .container{
+        display: flex;
+    }
+}
+
+.nav {
+    @extend %align-list;
+    display: flex;
+}
+
+.nav__logo{
+    display: block;
+    margin-right: 93px;
+    padding: 24px 0 25px 0;
+    color: var(--accent-color);
+    font-family: Raleway, normal;
+    font-size: 26px;
+    line-height: 1.19;
+    font-weight: 700;
+}
+
+.nav__logo--second-part {
+    color:var(--primary-text-color);
+}
+
+.contact-nav__item {
+    margin-right: 50px;
+}
+
+.contact-nav__link{
+ @extend %align-list;
+  padding: 32px 0;
+  color: var(--secondary-text-color);
+
+  &:hover,
+  &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.contact-nav__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.site-nav.current {
+    color: var(--accent-color);
+  }
+
+.site-nav {
+    display: flex;
+    margin:0; 
+
+    .list{
+        position: relative;
+      
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+        display: block;
+        padding:32px 0;
+        color: var(--primary-text-color);
+        @include font(500, 1.14, 14px, 0.02em);
+    }
+   
+   .list:hover,
+   .list:focus {
+     color: var(--accent-color);
+    }
+}
+
+.site-nav .item + .item {
+	margin-left: 50px;
+}
+
+.site-nav .list.current::after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+.contact-nav{
+    display: flex;
+    margin-left: auto;
+
+    .list{
+        display: flex;
+        padding: 32px 0; 
+        color: var(--secondary-text-color);
+        @include font(500, 1.14, 14px, 0.02em);
+    }
+}
+
+.contact-nav .item:not(:last-child){
+    margin-right: 50px;
+}
+
+.site-nav .list.current,
+.contact-nav .list.current{
+    color:var(--accent-color);
+}
+
+.contact-nav .list:hover,
+.contact-nav .list:focus{
+    color:var(--accent-color);
+}
+
