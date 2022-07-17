@@ -1,39 +1,84 @@
 .clients {
-    padding: 94px 0;
-    background: var(--primary-bg-color);
+  padding: 94px 0;
+  &__title {
+    // font-size: 36px;
+    line-height: 1.67;
+    text-align: center;
+    // margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+    padding: 0;
+    color: var(--primary-text-color);
+    @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    margin-bottom: 50px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
-.clients__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
+  &__item {
+    flex-basis: calc((100% - 30px) / 2);
+    height: 92px;
+  }
+  &__link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    outline: transparent;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    color: #afb1b8;
+    transition: color var(---primary-cubic-function),
+      border-color var(--primary-cubic-function);
+    &:hover,
+    &:focus {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+  }
+  &__icon {
+    fill: currentColor;
+  }
+  @media screen and (max-width: $mobile) {
+    padding: 60px 0;
+   }
 }
 
-.clients__link {
-  transition-property: color, background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  display: flex;
-  width: 170px;
-  height: 92px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  justify-content: center;
-  border: 1px solid var(--svg-links-color);
-  border-radius: 4px;
-  color: var(--svg-links-color);
-
-  &:hover,
-  &:focus {
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-  outline: none;
+// @media screen and (min-width: $mobile) {
+// }
+@media screen and (min-width: $tablet) {
+  .clients__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
+@media screen and (min-width: $desktop) {
+  .clients__item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
 }
 
-.clients__icon {
-  fill: currentColor;
+// .clients__title {
+// 	font-weight: 700;
+// 	font-size: 28px;
+// 	line-height: 1.17;
+// 	text-align: center;
+// 	letter-spacing: 0.03em;
+// 	margin-bottom: 30px;
+//   padding: 0;
+//   color: var(--primary-text-color);
 
-}
+// 	// @media screen and (min-width: $desktop) {
+// 	// 	font-size: 36px;
+// 	// 	margin-bottom: 50px;
+// 	// }
+// }

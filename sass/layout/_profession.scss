@@ -1,27 +1,32 @@
 .profession {
     padding-bottom: 94px;
+    display: none;
 
     ul{
         display:flex;
         flex-wrap: wrap;
+        gap: 30px;
     }
 
 }
 
-.profession__list .profession__item:not(:last-child){
-    margin-right: 30px;
-}
+// .profession__list .profession__item:not(:last-child){
+//     margin-right: 30px;
+// }
  
 .profession__item  {
     position: relative;
 }
-
+.profession__image{
+    max-width: 100%;
+}
 .profession__text {
     position: absolute;
     bottom: 0;
     left: 0;
 
     @extend %align-list;
+    display: flex;
     justify-content: center;
 
     width: 100%;
@@ -35,3 +40,9 @@
     background-color: rgba(47, 48, 58, 0.8);
     color: var(--primary-bg-color);
 }
+
+@media screen and (min-width: $desktop) {
+    .profession {
+      display: flex;
+    }
+  }

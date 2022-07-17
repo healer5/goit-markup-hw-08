@@ -1,45 +1,48 @@
-.feature {
-    padding: 94px 0;
-}
-
-.feature__list{
-    display: flex;
-    margin: 0;
-    padding:0;
-
-    .feature__item {
-        width: 270px;
-    }
-
-    .feature__title {
-        margin-top:0;
-        margin-bottom: 10px;
-        color: var(--primary-text-color);
-        text-transform: uppercase;
-        @include font(700, 1.14, 14px, 0.03em);
-    }
-
-    .feature__paragraph {
-        margin-top:0;
-        font-size: 14px;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
-        color: var(--secondary-text-color);
-    }
-}
-
-.feature__list .feature__item + .feature__item {
-    margin-left: 30px;
-}
-
-.svg-container {
-    justify-content: center;
-    @extend %align-list;
+.about {
+	padding: 60px 0;
   
-    margin-bottom: 30px;
-    height: 120px;
+	&__list {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 30px;
+	}
+	&__icon-wrapper {
+	  display: flex;
+	  height: 120px;
+	  justify-content: center;
+	  align-items: center;
+	  background-color: var(--team-background-color);
+	  border-radius: 4px;
+	  margin-bottom: 30px;
+	}
+	&__title {
+	  text-align: center;
+	  font-size: 14px;
+	  line-height: 1.14;
+	  margin-bottom: 10px;
+	  text-transform: uppercase;
+	  color: black;
+	}
+	&__description {
+	  font-size: 14px;
+	  line-height: 1.71;
+	  color: var(--secondary-text-color);
+	}
+  }
   
-    background-color: var(--team-background-color);
-    border-radius: 4px;
-    
-}
+  @media screen and (min-width: $tablet) {
+	.about__title {
+	  text-align: left;
+	}
+	.about__item {
+	  width: calc((100% - 30px) / 2);
+	}
+  }
+  @media screen and (min-width: $desktop) {
+	.about {
+	  padding: 94px 0;
+	}
+	.about__item {
+	  width: calc((100% - 90px) / 4);
+	}
+  }
