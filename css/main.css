@@ -938,11 +938,11 @@ ul {
 .footer {
   text-align: center;
   padding: 30px 0;
-  background-color: #2f303a;
+  background-color: var(--secondary-bg-color);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
-  color: #FFFFFF;
+  color: var(--primary-bg-color);
 }
 
 .address-wrapper {
@@ -953,7 +953,7 @@ ul {
   margin-bottom: 20px;
 }
 .footer__logo--second-part {
-  color: #FFFFFF;
+  color: var(--primary-bg-color);
 }
 
 .address-join-wrapper {
@@ -967,7 +967,7 @@ ul {
 
 .address__location {
   margin-bottom: 9px;
-  color: #FFFFFF;
+  color: var(--primary-bg-color);
 }
 
 .footer-contacts__item:first-of-type {
@@ -1006,8 +1006,7 @@ ul {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border-radius: 50%;
-  color: #ffffff;
+  color: var(--primary-bg-color);
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color var(--primary-cubic-function);
 }
@@ -1036,7 +1035,7 @@ ul {
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  background-color: #2f303a;
+  background-color: var(--secondary-bg-color);
 }
 
 .subscribe__button {
@@ -1052,8 +1051,8 @@ ul {
   font-size: 16px;
   line-height: 1.67;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: #2196f3;
+  color: var(--primary-bg-color);
+  background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
