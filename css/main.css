@@ -874,14 +874,12 @@ ul {
   padding: 94px 0;
 }
 .clients__title {
-  line-height: 1.67;
   text-align: center;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.17;
-  text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   padding: 0;
   color: var(--primary-text-color);
 }
@@ -889,6 +887,7 @@ ul {
   .clients__title {
     font-size: 36px;
     margin-bottom: 50px;
+    line-height: 1.67;
   }
 }
 .clients__list {
@@ -907,9 +906,9 @@ ul {
   justify-content: center;
   align-items: center;
   outline: transparent;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--svg-links-color);
   border-radius: 4px;
-  color: #afb1b8;
+  color: var(--svg-links-color);
   transition: color var(---primary-cubic-function), border-color var(--primary-cubic-function);
 }
 .clients__link:hover, .clients__link:focus {
