@@ -842,11 +842,16 @@ ul {
 }
 .soc-list__link:hover, .soc-list__link:focus {
   background-color: #2196F3;
+  fill: var(--primary-bg-color);
   outline: transparent;
+  color: white;
 }
 
 .soc-list__icon {
-  fill: #afb1b8;
+  fill: var(--svg-links-color);
+}
+.soc-list__icon:hover, .soc-list__icon:focus {
+  fill: var(--primary-bg-color);
 }
 
 .team__title {

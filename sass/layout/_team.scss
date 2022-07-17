@@ -70,13 +70,21 @@
 	&:hover,
 	&:focus {
 		background-color:#2196F3;
-		// color: var(--primary-bg-color);
+		fill:var(--primary-bg-color);
 		outline: transparent;
+		color: white;
 	}
 }
 
 .soc-list__icon {
-	fill: #afb1b8;;
+	fill:var(--svg-links-color);
+	&:hover,
+	&:focus {
+		// background-color:#2196F3;
+		fill:var(--primary-bg-color);
+		// // outline: transparent;
+		// color: white;
+	}
 }
 
 .team__title{
@@ -92,3 +100,4 @@
 	  color: var(--primary-text-color);
 	}
 }
+
