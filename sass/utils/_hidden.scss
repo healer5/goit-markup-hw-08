@@ -10,3 +10,10 @@
     clip-path: inset(50%);
     margin: -1px;
   }
+
+  .is-hidden {
+    opacity: 0;
+    transition: opacity var(--primary-transition-time) var(--primary-cubic-function);
+    visibility: hidden;
+    pointer-events: none;
+  }

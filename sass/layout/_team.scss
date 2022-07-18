@@ -1,17 +1,21 @@
 .team {
 	background-color: #f5f4fa;
 	padding: 60px 0;
+	
+	@media screen and (min-width: $desktop) {
+		  padding: 94px 0;
+		}
 
 	&__list {
 
-		@include tablet {
 			display: flex;
 			flex-wrap: wrap;
-			// margin: calc(-1 * 15px);
-		}
+			gap: 30px;
 	}
 
 	&__item {
+		flex-basis: 100%;
+		padding-bottom: 30px;
 		background-color: var(--primary-bg-color);
 		text-align: center;
 		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -23,28 +27,28 @@
 			}
 		}
 		@include tablet {
-			flex-basis: calc((100% - 60px) / 2);
-			margin: 15px;
+			flex-basis: calc((100% - 30px) / 2);
+			padding-bottom: 30px;
 		}
 		@include desktop {
-			flex-basis: calc((100% - 120px) / 4);
+			flex-basis: calc((100% - 90px) / 4);
+			padding-bottom: 30px;
 		}
-	}
-
-	&__content {
-		padding-top: 30px;
-		padding-bottom: 24px;
+		width: 100%;
 	}
 
 	&__name {
 		margin-bottom: 10px;
+		padding-top: 30px;
 		@include font(500, 1.19, 16px, null);
 		color: var(--primary-text-color);
 	}
 
 	&__position {
 		@include font(null, 1.19, 16px, null);
-		margin-bottom: 16px;
+		margin: 0 0 16px 0;
+		padding: 0;
+
 	}
 }
 .soc-list {
@@ -80,10 +84,7 @@
 	fill:var(--svg-links-color);
 	&:hover,
 	&:focus {
-		// background-color:#2196F3;
 		fill:var(--primary-bg-color);
-		// // outline: transparent;
-		// color: white;
 	}
 }
 
